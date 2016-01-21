@@ -17,7 +17,7 @@ b) fill in the object as the example below, object name was given as config_wifi
 * config_wifi.token = "Your Token";
 * config_wifi.connType = CONNECTION_HTTP;		//Note [1]	
 
-> Note [1]: For a secure connection, use CONNECTION_HTTPS instead. For HTTPS , you will need to install the Tago certificate on your board (more information here).
+> Note [1]: For a secure connection, use CONNECTION_HTTPS instead. For HTTPS , you will need to install the Tago certificate on your board.
 
 With the fields set just call the method to start communication with the service.
 
