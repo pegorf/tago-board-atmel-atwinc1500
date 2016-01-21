@@ -3,7 +3,7 @@ Documentation for the Tago library used with atwinc1500 Atmel board to use Tago 
 
 Unless otherwise specified, all the variables inside the library related to communication or configuration are of type string. 
 
-- STEP 1. Configuration of the Tago Service
+## STEP 1. Configuration of the Tago Service
 
 In order to be able to communicate to Tago service an account is required as well as a token. A token is the key generated for each device that grants access to Tago. Make sure you have at least one token available. More information under https://tago.io. 
 
@@ -23,7 +23,7 @@ With the fields set just call the method to start communication with the service
 
 	libTagoWinc__begin(&config_wifi);
 
-- STEP2. Exchanging data with Tago
+## STEP2. Exchanging data with Tago
 
 To exchange data with the server, an object of type libTagoWincPost_t is required to be configured. 
 
@@ -47,7 +47,7 @@ a) To send data to Tago
 
 In order to send the data, a call to the insert function is required passing the above object as reference.
 
-  libTagoWinc__insert(&post_data);
+	libTagoWinc__insert(&post_data);
 
 This function returns:
 
@@ -79,11 +79,11 @@ In order to request the data, a call to the find function is required passing th
   
 This function return 0 if it succeed on posting data. -1 if error or busy. 
 
-- STEP 3. Keep connection
+## STEP 3. Keep connection
 
   A call to the method libTagoWinc__KeepConnection() is required in a loop to keep the connection active in case an interrupt to wifi does happen.
 
-- STEP 4. Receiving and processing results (callback)
+## STEP 4. Receiving and processing results (callback)
 
   The callback is a function passed from the application to the library. The function is executed as long as data are received from the Tago server after a request of (1) insert or (2) find.
 
